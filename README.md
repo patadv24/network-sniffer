@@ -1,143 +1,131 @@
-# Python Network Sniffer v1.0
+# Python Network Sniffer v2.0
 
-A beginner-friendly network sniffer built using **Python + Scapy** to explore packet analysis, DNS monitoring, protocol inspection, and networking fundamentals through real-time traffic capture.
+Python-based network sniffer built using Scapy for packet analysis, DNS monitoring, service identification, traffic filtering, packet logging and multithreaded packet processing.
 
 ---
 
 ## 🚀 Features
 
-* Live Packet Sniffing
-* TCP / UDP Protocol Detection
-* DNS Query Detection
-* Service Identification
-* Real-time Packet Statistics
-* Timestamp Logging
-* Startup Banner
-* Graceful Ctrl+C Handling
-* Final Session Statistics
-* Protocol Dictionary Mapping
+- Live Packet Capture
+- TCP / UDP / DNS Traffic Detection
+- DNS Query Monitoring
+- Service Identification
+- Traffic Filters
+- Packet Counters
+- Live Dashboard
+- Export Session Logs
+- Colorized Terminal Output
+- Graceful Shutdown Statistics
+- Multithreaded Packet Processing using Queue + Worker Threads
 
 ---
 
 ## 🧠 Concepts Used
 
-* Packet Sniffing
-* Network Interfaces
-* TCP vs UDP
-* Protocol Layers
-* DNS Traffic Analysis
-* Raw Sockets
-* Packet Parsing
-* Exception Handling
-* Traffic Monitoring
-* Real-time Statistics
+- Packet Sniffing
+- Networking Fundamentals
+- TCP/IP Protocols
+- DNS Analysis
+- Protocol Identification
+- Packet Filtering
+- Threading
+- Queue Data Structures
+- Logging
+- Python Exception Handling
+
+---
+
+## 🆕 New in v2.0
+
+- Traffic filtering options
+- Session log export
+- Neon colorized output
+- Live dashboard statistics
+- Queue-based architecture
+- Worker thread packet processing
+- Cleaner GitHub project structure
 
 ---
 
 ## 📸 Screenshots
 
-### 🔹 Startup Banner
+### Startup + Traffic Filter
 
-![Startup](startup_banner.png)
-
----
-
-### 🔹 DNS Detection
-
-![DNS1](dnsdetect1.png)
+![Startup](screenshots/v2/startup_filter_menu.png)
 
 ---
 
-### 🔹 Live Traffic Analysis
+### Colorized Packet Output
 
-![DNS2](dnsdetect2.png)
-
----
-
-### 🔹 Packet Statistics
-
-![Stats](googledns.png)
+![Output](screenshots/v2/colored_packet_output.png)
 
 ---
 
-### 🔹 Final Session Summary
+### Live Dashboard
 
-![Summary](final_session_stats.png)
+![Dashboard](screenshots/v2/live_dashboard.png)
+
+---
+
+### Session Log Export
+
+![Logs](screenshots/v2/session_log_output.png)
+
+---
+
+### Graceful Shutdown Summary
+
+![Shutdown](screenshots/v2/shutdown_summary.png)
 
 ---
 
 ## ⚙️ How It Works
 
-1. Listens on a selected network interface
-2. Captures packets using Scapy
-3. Extracts IP layer information
-4. Detects TCP / UDP packets
-5. Identifies ports and services
-6. Detects DNS queries
-7. Tracks packet statistics in real-time
-8. Displays final session summary on exit
+1. User launches sniffer
+2. Selects traffic filter
+3. Scapy captures packets
+4. Captured packets enter Queue
+5. Worker thread processes packets
+6. Protocols and services identified
+7. DNS queries extracted
+8. Dashboard updates live
+9. Session logs exported automatically
 
 ---
 
 ## 🛠 Tech Stack
 
-* Python
-* Scapy
-* Linux
-* Virtual Environments
-* Networking Fundamentals
+- Python
+- Scapy
+- Colorama
+- Threading
+- Queue
 
 ---
 
 ## ▶ Usage
 
-Install dependency:
+Install requirements:
 
 ```bash
-pip install scapy
-```
-
-Activate virtual environment:
-
-```bash
-source venv/bin/activate
-```
+pip install -r requirements.txt
 
 Run:
+sudo python3 sniffer.py
 
-```bash
-sudo venv/bin/python3 sniffer.py
-```
+⚠ Limitations
+Requires root privileges
+Interface name may vary
+DNS visibility depends on traffic
+HTTPS contents remain encrypted
+Terminal based UI only
 
----
 
-## ⚠ Limitations
+⚠ Ethical Note
 
-* Linux-focused implementation
-* Captures only selected interface traffic
-* Does not decrypt HTTPS traffic
-* Requires elevated permissions
-* High traffic may generate very large output
+Use only on systems and networks you own or have permission to monitor.
 
----
 
-## 🔮 Future Improvements
-
-* Packet filtering options
-* Traffic export to file
-* GUI version
-* Better protocol detection
-* Threading optimization (v2.0)
-* Protocol statistics dashboard
-
----
-
-## ⚠ Ethical Note
-
-Use this tool only on systems and networks you own or are authorized to monitor.
-
----
-
-## 👨‍💻 Author
-
+👨‍💻 Author
 Advait Pathak
+Cybersecurity • Networking • Python
