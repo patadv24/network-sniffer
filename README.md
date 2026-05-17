@@ -1,7 +1,6 @@
 # Python Network Sniffer v2.0
 
-Python-based network sniffer built using Scapy for packet analysis, DNS monitoring, service identification, traffic filtering, packet logging and multithreaded packet processing.
-
+Python-based network sniffer built using Scapy featuring live packet analysis, DNS monitoring, traffic filtering, logging, dashboards and multithreaded packet processing.
 ---
 
 ## 🚀 Features
